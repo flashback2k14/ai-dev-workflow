@@ -2,6 +2,8 @@
 
 This template uses [Claude Code](https://docs.anthropic.com/en/docs/claude-code) with modern Skills, Rules, and Sub-Agents to provide a complete AI-powered development workflow.
 
+Big thanks to **[Alex Sprogis](https://alexsprogis.de)** for creating the [foundation](https://github.com/AlexPEClub/ai-coding-starter-kit) for this workflow.
+
 ## Quick Start
 
 ### 1. Clone & Install
@@ -49,7 +51,7 @@ After project initialization, build features one at a time using skills:
 /frontend        Build the UI for features/PROJ-1-user-auth.md
 /backend         Build the API for features/PROJ-1-user-auth.md
 /qa              Test features/PROJ-1-user-auth.md
-/deploy          Deploy to Vercel
+/deploy          Deploy with docker compose
 ```
 
 Each skill suggests the next step when it finishes. Handoffs are always user-initiated.
@@ -64,10 +66,10 @@ To add more features later, run `/requirements` again - it detects the existing 
 | --------------------- | --------------- | ------------------------------------------------------------------------ |
 | Requirements Engineer | `/requirements` | Creates feature specs with user stories, acceptance criteria, edge cases |
 | Solution Architect    | `/architecture` | Designs PM-friendly tech architecture (no code, only high-level design)  |
-| Frontend Developer    | `/frontend`     | Builds UI with React, Tailwind CSS, and shadcn/ui                        |
-| Backend Developer     | `/backend`      | Builds APIs, database schemas, RLS policies with Supabase                |
+| Frontend Developer    | `/frontend`     | Builds UI with Angular, Angular Material and Tailwind CSS                |
+| Backend Developer     | `/backend`      | Builds APIs, database schemas with Prisma and sqlite                     |
 | QA Engineer           | `/qa`           | Tests features against acceptance criteria + security audit              |
-| DevOps                | `/deploy`       | Deploys to Vercel with production-ready checks                           |
+| DevOps                | `/deploy`       | Deploys with docker compose with production-ready checks                 |
 | Help                  | `/help`         | Context-aware guide: shows where you are and what to do next             |
 
 ### How Skills Work
@@ -87,7 +89,7 @@ To add more features later, run `/requirements` again - it detects the existing 
 3. Build     /frontend      -->  UI components implemented
              /backend       -->  APIs + database (if needed)
 4. Test      /qa            -->  Test results added to feature spec
-5. Ship      /deploy        -->  Deployed to Vercel
+5. Ship      /deploy        -->  Deployed to docker compose
 ```
 
 ### Feature Tracking
@@ -122,19 +124,11 @@ Run `/requirements` with your feature idea. The skill will:
 - Update `features/INDEX.md` with the new feature
 - Suggest running `/architecture` as the next step
 
-### 3. Add shadcn/ui Components (as needed)
-
-35+ components are pre-installed. Add more as needed:
-
-```bash
-npx shadcn@latest add [component-name]
-```
-
-### 4. Production Setup (first deployment)
+### 3. Production Setup (first deployment)
 
 When you're ready to deploy, the `/deploy` skill guides you through:
 
-- Vercel setup and deployment
+- docker compose setup and deployment
 - Error tracking with Sentry
 - Security headers configuration
 - Performance monitoring with Lighthouse
