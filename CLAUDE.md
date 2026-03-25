@@ -8,6 +8,7 @@
 - **Styling:** Tailwind CSS + spartan/ui (spartan.ng)
 - **Backend:** Node.js + Express + Prisma ORM + SQLite
 - **Deployment:** Docker Compose
+- **Charts:** Angular Charts (angularcharts.com)
 - **Validation:** Zod + Angular Signal Forms
 - **State:** Angular Services (injectable)
 

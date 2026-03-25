@@ -7,6 +7,12 @@ Before marking frontend as complete:
 - [ ] No custom duplicates of spartan/ui components created
 - [ ] spartan/ui Brain and Helm packages imported for each component used
 
+## Charts & Data Visualization (if feature requires charts)
+- [ ] Used Angular Charts (angularcharts.com) for all chart components
+- [ ] No other charting libraries used (no ng2-charts, Chart.js, D3, etc.)
+- [ ] Charts are responsive across breakpoints
+- [ ] Dark mode support verified
+
 ## Existing Code
 - [ ] Checked existing project components via `git ls-files src/components/`
 - [ ] Reused existing components where possible
