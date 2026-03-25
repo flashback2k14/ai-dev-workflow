@@ -6,21 +6,23 @@ paths:
 
 # Frontend Development Rules
 
-## Angular Material First (MANDATORY)
-- Before creating ANY UI component, check if Angular Material has it
-- NEVER create custom implementations of: Button, Input, Select, Checkbox, Slide Toggle, Dialog, Snackbar, Table, Tabs, Card, Badge, Menu, Tooltip, Navigation, Sidenav, Breadcrumb, Progress Bar, Spinner
-- Import Angular Material modules directly in standalone component imports array
-- Custom components are ONLY for business-specific compositions that internally use Angular Material
+## spartan/ui First (MANDATORY)
+- Before creating ANY UI component, check if spartan/ui (spartan.ng) has it
+- NEVER create custom implementations of: Button, Input, Select, Checkbox, Switch, Dialog, Alert Dialog, Sonner/Toast, Table, Tabs, Card, Badge, Menu, Tooltip, Navigation Menu, Sheet, Breadcrumb, Progress, Spinner
+- Import spartan/ui Helm directives/components directly in standalone component imports array
+- Brain packages (`@spartan-ng/ui-*-brain`) provide accessible primitives (logic, state, a11y)
+- Helm components (`@spartan-ng/ui-*-helm`) provide Tailwind-based styling — you own and can customize these
+- Custom components are ONLY for business-specific compositions that internally use spartan/ui primitives
 
 ## Import Pattern
 ```typescript
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatInputModule } from '@angular/material/input';
+import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
+import { HlmCardDirective } from '@spartan-ng/ui-card-helm';
+import { HlmInputDirective } from '@spartan-ng/ui-input-helm';
 
 @Component({
   standalone: true,
-  imports: [MatButtonModule, MatCardModule, MatInputModule],
+  imports: [HlmButtonDirective, HlmCardDirective, HlmInputDirective],
 })
 ```
 
@@ -29,7 +31,7 @@ import { MatInputModule } from '@angular/material/input';
 - Use `inject()` function instead of constructor injection
 - Use `OnPush` change detection for all components
 - Use signals (`signal()`, `computed()`, `linkedSignal()`) for reactive state
-- Use Tailwind CSS for custom layout/spacing (Angular Material for components)
+- Use Tailwind CSS for layout/spacing and spartan/ui Helm styles for components
 - All components must be responsive (mobile 375px, tablet 768px, desktop 1440px)
 - Implement loading states, error states, and empty states
 - Use semantic HTML and ARIA labels for accessibility

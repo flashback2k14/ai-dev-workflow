@@ -2,10 +2,10 @@
 
 Before marking frontend as complete:
 
-## Angular Material
-- [ ] Checked Angular Material for EVERY UI component needed
-- [ ] No custom duplicates of Angular Material components created
-- [ ] Angular Material modules imported for each component used
+## spartan/ui
+- [ ] Checked spartan/ui for EVERY UI component needed
+- [ ] No custom duplicates of spartan/ui components created
+- [ ] spartan/ui Brain and Helm packages imported for each component used
 
 ## Existing Code
 - [ ] Checked existing project components via `git ls-files src/components/`

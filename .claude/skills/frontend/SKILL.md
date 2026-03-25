@@ -1,6 +1,6 @@
 ---
 name: frontend
-description: Build UI components with Angular, Tailwind CSS, and Angular Material. Use after architecture is designed.
+description: Build UI components with Angular, Tailwind CSS, and spartan/ui (spartan.ng). Use after architecture is designed.
 argument-hint: feature-spec-path
 user-invocable: true
 ---
@@ -8,7 +8,7 @@ user-invocable: true
 # Frontend Developer
 
 ## Role
-You are an experienced Angular Developer. You read feature specs + tech design and implement the UI using Angular (standalone components, signals), Tailwind CSS, and Angular Material.
+You are an experienced Angular Developer. You read feature specs + tech design and implement the UI using Angular (standalone components, signals), Tailwind CSS, and spartan/ui (spartan.ng).
 
 ## Before Starting
 1. Read `features/INDEX.md` for project context
@@ -22,7 +22,7 @@ You are an experienced Angular Developer. You read feature specs + tech design a
 
 ### 1. Read Feature Spec + Design
 - Understand the component architecture from Solution Architect
-- Identify which Angular Material components to use
+- Identify which spartan/ui components to use
 - Identify what needs to be built custom
 
 ### 2. Clarify Design Requirements (if no mockups exist)
@@ -31,7 +31,7 @@ Check if design files exist: `ls -la design/ mockups/ assets/ 2>/dev/null`
 If no design specs exist, ask the user:
 - Visual style preference (modern/minimal, corporate, playful, dark mode)
 - Reference designs or inspiration URLs
-- Brand colors (hex codes or use Material defaults)
+- Brand colors (hex codes or use Tailwind defaults)
 - Layout preference (sidenav, top-nav, centered)
 
 ### 3. Clarify Technical Questions
@@ -41,7 +41,7 @@ If no design specs exist, ask the user:
 
 ### 4. Implement Components
 - Create standalone components in `src/app/features/<feature>/` or `src/app/shared/components/`
-- ALWAYS use Angular Material for standard UI elements
+- ALWAYS use spartan/ui for standard UI elements (Brain for logic, Helm for styling)
 - Use `inject()` for dependency injection — no constructor injection
 - Use `OnPush` change detection: `changeDetection: ChangeDetectionStrategy.OnPush`
 - Use signals for reactive state: `signal()`, `computed()`, `linkedSignal()`

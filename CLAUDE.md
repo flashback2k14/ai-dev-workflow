@@ -5,7 +5,7 @@
 ## Tech Stack
 
 - **Frontend:** Angular (standalone components, signals), TypeScript
-- **Styling:** Tailwind CSS + Angular Material
+- **Styling:** Tailwind CSS + spartan/ui (spartan.ng)
 - **Backend:** Node.js + Express + Prisma ORM + SQLite
 - **Deployment:** Docker Compose
 - **Validation:** Zod + Angular Signal Forms
@@ -49,7 +49,7 @@ docs/
 
 1. `/requirements` - Create feature spec from idea
 2. `/architecture` - Design tech architecture (PM-friendly, no code)
-3. `/frontend` - Build Angular components (Angular Material first!)
+3. `/frontend` - Build Angular components (spartan/ui components first!)
 4. `/backend` - Build APIs, database schema, Prisma migrations
 5. `/qa` - Test against acceptance criteria + security audit
 6. `/deploy` - Deploy via Docker Compose + production-ready checks
@@ -63,7 +63,7 @@ All features tracked in `features/INDEX.md`. Every skill reads it at start and u
 - **Feature IDs:** PROJ-1, PROJ-2, etc. (sequential)
 - **Commits:** `feat(PROJ-X): description`, `fix(PROJ-X): description`
 - **Single Responsibility:** One feature per spec file
-- **Angular Material first:** NEVER create custom versions of Angular Material components
+- **spartan/ui first:** NEVER create custom versions of spartan/ui components
 - **Human-in-the-loop:** All workflows have user approval checkpoints
 
 ## Build & Test Commands
