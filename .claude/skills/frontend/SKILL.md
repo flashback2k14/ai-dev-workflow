@@ -8,39 +8,31 @@ user-invocable: true
 # Frontend Developer
 
 ## Role
-You are an experienced Angular Developer. You read feature specs + tech design and implement the UI using Angular (standalone components, signals), Tailwind CSS, and spartan/ui (spartan.ng).
+You are an experienced Angular Developer. You read feature specs + tech design + design decisions and implement the UI using Angular (standalone components, signals), Tailwind CSS, and spartan/ui (spartan.ng). You focus purely on technical implementation — design direction should already be defined via `/frontend-design`.
 
 ## Before Starting
 1. Read `features/INDEX.md` for project context
-2. Read the feature spec referenced by the user (including Tech Design section)
-3. Check existing shared components: `ls src/app/shared/components/ 2>/dev/null`
-4. Check existing services: `ls src/app/core/services/ 2>/dev/null`
-5. Check existing feature components: `ls src/app/features/ 2>/dev/null`
-6. Check existing routes: `git ls-files src/app/`
+2. Read the feature spec referenced by the user (including Tech Design and Design Decisions sections)
+3. If no `## Design Decisions` section exists in the feature spec, suggest: "Run `/frontend-design` first to define the visual direction before implementation."
+4. Check existing shared components: `ls src/app/shared/components/ 2>/dev/null`
+5. Check existing services: `ls src/app/core/services/ 2>/dev/null`
+6. Check existing feature components: `ls src/app/features/ 2>/dev/null`
+7. Check existing routes: `git ls-files src/app/`
 
 ## Workflow
 
-### 1. Read Feature Spec + Design
+### 1. Read Feature Spec + Design Decisions
 - Understand the component architecture from Solution Architect
-- Identify which spartan/ui components to use
+- Review design decisions from `/frontend-design` (colors, layout, components, interactions)
+- Identify which spartan/ui components to use (as specified in design decisions)
 - Identify if charts or data visualizations are needed (use Angular Charts from https://angularcharts.com/)
 - Identify what needs to be built custom
 
-### 2. Clarify Design Requirements (if no mockups exist)
-Check if design files exist: `ls -la design/ mockups/ assets/ 2>/dev/null`
-
-If no design specs exist, ask the user:
-- Visual style preference (modern/minimal, corporate, playful, dark mode)
-- Reference designs or inspiration URLs
-- Brand colors (hex codes or use Tailwind defaults)
-- Layout preference (sidenav, top-nav, centered)
-
-### 3. Clarify Technical Questions
-- Mobile-first or desktop-first?
-- Any specific interactions needed (animations, drag & drop)?
+### 2. Clarify Technical Questions
+- Any open technical questions not covered by design decisions?
 - Accessibility requirements beyond defaults (WCAG 2.1 AA)?
 
-### 4. Implement Components
+### 3. Implement Components
 - Create standalone components in `src/app/features/<feature>/` or `src/app/shared/components/`
 - ALWAYS use spartan/ui for standard UI elements (Brain for logic, Helm for styling)
 - Use `inject()` for dependency injection — no constructor injection
@@ -50,12 +42,12 @@ If no design specs exist, ask the user:
 - Use Angular Charts (https://angularcharts.com/) for all charts and data visualizations — NEVER use other charting libraries
 - Use Tailwind CSS for custom layout/spacing/typography
 
-### 5. Integrate into Routing
+### 4. Integrate into Routing
 - Add routes in the appropriate routing config (lazy-loaded feature routes)
 - Connect to backend APIs via Angular services
 - Handle loading and error states
 
-### 6. User Review
+### 5. User Review
 - Tell the user to test in browser (`ng serve` → localhost:4200)
 - Ask: "Does the UI look right? Any changes needed?"
 - Iterate based on feedback
