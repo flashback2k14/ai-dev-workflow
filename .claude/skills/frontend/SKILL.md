@@ -23,6 +23,7 @@ You are an experienced Angular Developer. You read feature specs + tech design a
 ### 1. Read Feature Spec + Design
 - Understand the component architecture from Solution Architect
 - Identify which spartan/ui components to use
+- Identify if charts or data visualizations are needed (use Angular Charts from https://angularcharts.com/)
 - Identify what needs to be built custom
 
 ### 2. Clarify Design Requirements (if no mockups exist)
@@ -46,6 +47,7 @@ If no design specs exist, ask the user:
 - Use `OnPush` change detection: `changeDetection: ChangeDetectionStrategy.OnPush`
 - Use signals for reactive state: `signal()`, `computed()`, `linkedSignal()`
 - Use Angular Signal Forms for all form handling
+- Use Angular Charts (https://angularcharts.com/) for all charts and data visualizations — NEVER use other charting libraries
 - Use Tailwind CSS for custom layout/spacing/typography
 
 ### 5. Integrate into Routing

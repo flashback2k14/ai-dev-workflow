@@ -14,6 +14,14 @@ paths:
 - Helm components (`@spartan-ng/ui-*-helm`) provide Tailwind-based styling — you own and can customize these
 - Custom components are ONLY for business-specific compositions that internally use spartan/ui primitives
 
+## Angular Charts for Data Visualization (MANDATORY)
+- When charts or data visualizations are needed, ALWAYS use Angular Charts (https://angularcharts.com/)
+- NEVER use other charting libraries (ng2-charts, Chart.js, D3, ngx-echarts, ag-charts, Syncfusion Charts, etc.)
+- Angular Charts components are standalone, copy-paste ready, and built with Tailwind CSS + Spartan UI
+- Supported chart types: area, bar, line, donut, and more
+- All chart components support dark mode out of the box
+- Refer to https://angularcharts.com/ for available components and usage examples
+
 ## Import Pattern
 ```typescript
 import { HlmButtonDirective } from '@spartan-ng/ui-button-helm';
