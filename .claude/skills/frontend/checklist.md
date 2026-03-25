@@ -2,10 +2,10 @@
 
 Before marking frontend as complete:
 
-## shadcn/ui
-- [ ] Checked shadcn/ui for EVERY UI component needed
-- [ ] No custom duplicates of shadcn components created
-- [ ] Missing shadcn components installed via `npx shadcn@latest add`
+## Angular Material
+- [ ] Checked Angular Material for EVERY UI component needed
+- [ ] No custom duplicates of Angular Material components created
+- [ ] Angular Material modules imported for each component used
 
 ## Existing Code
 - [ ] Checked existing project components via `git ls-files src/components/`
