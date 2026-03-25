@@ -16,10 +16,7 @@ Before marking frontend as complete:
 ## Existing Code
 - [ ] Checked existing project components via `git ls-files src/components/`
 - [ ] Reused existing components where possible
-
-## Design
-- [ ] Design preferences clarified with user (if no mockups)
-- [ ] Component architecture from Solution Architect followed
+- [ ] Design decisions from `/frontend-design` reviewed (if available)
 
 ## Implementation
 - [ ] All planned components implemented

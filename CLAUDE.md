@@ -50,10 +50,11 @@ docs/
 
 1. `/requirements` - Create feature spec from idea
 2. `/architecture` - Design tech architecture (PM-friendly, no code)
-3. `/frontend` - Build Angular components (spartan/ui components first!)
-4. `/backend` - Build APIs, database schema, Prisma migrations
-5. `/qa` - Test against acceptance criteria + security audit
-6. `/deploy` - Deploy via Docker Compose + production-ready checks
+3. `/frontend-design` - Design UI look & feel (after architecture, before implementation)
+4. `/frontend` - Implement Angular components based on design decisions
+5. `/backend` - Build APIs, database schema, Prisma migrations
+6. `/qa` - Test against acceptance criteria + security audit
+7. `/deploy` - Deploy via Docker Compose + production-ready checks
 
 ## Feature Tracking
 
