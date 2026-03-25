@@ -47,11 +47,12 @@ You don't need to put everything in the first prompt - a brief description is en
 After project initialization, build features one at a time using skills:
 
 ```
-/architecture    Design the tech approach for features/PROJ-1-user-auth.md
-/frontend        Build the UI for features/PROJ-1-user-auth.md
-/backend         Build the API for features/PROJ-1-user-auth.md
-/qa              Test features/PROJ-1-user-auth.md
-/deploy          Deploy with docker compose
+/architecture       Design the tech approach for features/PROJ-1-user-auth.md
+/frontend-design    Design the UI look & feel for features/PROJ-1-user-auth.md
+/frontend           Build the UI for features/PROJ-1-user-auth.md
+/backend            Build the API for features/PROJ-1-user-auth.md
+/qa                 Test features/PROJ-1-user-auth.md
+/deploy             Deploy with docker compose
 ```
 
 Each skill suggests the next step when it finishes. Handoffs are always user-initiated.
@@ -65,8 +66,9 @@ To add more features later, run `/requirements` again - it detects the existing 
 | Skill                 | Command         | What It Does                                                             |
 | --------------------- | --------------- | ------------------------------------------------------------------------ |
 | Requirements Engineer | `/requirements` | Creates feature specs with user stories, acceptance criteria, edge cases |
-| Solution Architect    | `/architecture` | Designs PM-friendly tech architecture (no code, only high-level design)  |
-| Frontend Developer    | `/frontend`     | Builds UI with Angular, spartan/ui and Tailwind CSS                      |
+| Solution Architect    | `/architecture`    | Designs PM-friendly tech architecture (no code, only high-level design)  |
+| Frontend Designer     | `/frontend-design` | Designs UI look & feel: colors, layout, components, interactions         |
+| Frontend Developer    | `/frontend`        | Builds UI with Angular, spartan/ui and Tailwind CSS                      |
 | Backend Developer     | `/backend`      | Builds APIs, database schemas with Prisma and sqlite                     |
 | QA Engineer           | `/qa`           | Tests features against acceptance criteria + security audit              |
 | DevOps                | `/deploy`       | Deploys with docker compose with production-ready checks                 |
@@ -84,12 +86,13 @@ To add more features later, run `/requirements` again - it detects the existing 
 ## Development Workflow
 
 ```
-1. Define    /requirements  -->  Feature spec in features/PROJ-X.md
-2. Design    /architecture  -->  Tech design added to feature spec
-3. Build     /frontend      -->  UI components implemented
-             /backend       -->  APIs + database (if needed)
-4. Test      /qa            -->  Test results added to feature spec
-5. Ship      /deploy        -->  Deployed to docker compose
+1. Define    /requirements      -->  Feature spec in features/PROJ-X.md
+2. Design    /architecture      -->  Tech design added to feature spec
+3. UI Design /frontend-design   -->  Design decisions added to feature spec
+4. Build     /frontend          -->  UI components implemented
+             /backend           -->  APIs + database (if needed)
+5. Test      /qa                -->  Test results added to feature spec
+6. Ship      /deploy            -->  Deployed to docker compose
 ```
 
 ### Feature Tracking
@@ -146,8 +149,9 @@ Each skill is a structured workflow that Claude Code discovers automatically. Sk
 | Skill           | Execution          | Why?                                    |
 | --------------- | ------------------ | --------------------------------------- |
 | `/requirements` | Inline             | Needs live interaction with user        |
-| `/architecture` | Inline             | Short output, user reviews in real-time |
-| `/frontend`     | Sub-agent (forked) | Heavy file editing, lots of output      |
+| `/architecture`    | Inline             | Short output, user reviews in real-time    |
+| `/frontend-design` | Inline             | Needs live interaction for design decisions |
+| `/frontend`        | Sub-agent (forked) | Heavy file editing, lots of output          |
 | `/backend`      | Sub-agent (forked) | Heavy file editing, SQL, API code       |
 | `/qa`           | Sub-agent (forked) | Systematic testing, lots of output      |
 | `/deploy`       | Inline             | Deployment needs user oversight         |
