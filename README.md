@@ -66,7 +66,7 @@ To add more features later, run `/requirements` again - it detects the existing 
 | --------------------- | --------------- | ------------------------------------------------------------------------ |
 | Requirements Engineer | `/requirements` | Creates feature specs with user stories, acceptance criteria, edge cases |
 | Solution Architect    | `/architecture` | Designs PM-friendly tech architecture (no code, only high-level design)  |
-| Frontend Developer    | `/frontend`     | Builds UI with Angular, Angular Material and Tailwind CSS                |
+| Frontend Developer    | `/frontend`     | Builds UI with Angular, spartan/ui and Tailwind CSS                      |
 | Backend Developer     | `/backend`      | Builds APIs, database schemas with Prisma and sqlite                     |
 | QA Engineer           | `/qa`           | Tests features against acceptance criteria + security audit              |
 | DevOps                | `/deploy`       | Deploys with docker compose with production-ready checks                 |

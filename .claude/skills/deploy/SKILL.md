@@ -96,7 +96,7 @@ For first deployment, guide the user through:
 
 ### Frontend build fails
 - Check Node.js version matches local (`node --version`)
-- Ensure all `@angular/material` modules are imported in affected components
+- Ensure all `@spartan-ng/ui-*-helm` and `@spartan-ng/ui-*-brain` packages are imported in affected components
 - Review `ng build` output for specific errors
 
 ### Backend won't connect to database

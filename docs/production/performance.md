@@ -66,16 +66,15 @@ export const routes: Routes = [
 
 ### Missing Loading States
 
-Always show feedback during data fetching. Use Angular Material:
+Always show feedback during data fetching. Use spartan/ui:
 
 ```typescript
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatSkeletonLoaderModule } from '@angular/material/skeleton-loader';
+import { HlmSpinnerComponent } from '@spartan-ng/ui-spinner-helm';
 ```
 
 ```html
 @if (isLoading()) {
-  <mat-spinner diameter="32" />
+  <hlm-spinner size="sm" />
 } @else {
   <app-task-list [tasks]="tasks()" />
 }
@@ -97,7 +96,7 @@ Look for large dependencies that can be replaced with smaller alternatives or la
 - [ ] All images use `ngSrc` (NgOptimizedImage)
 - [ ] All feature routes are lazy-loaded
 - [ ] Loading states show spinner/skeleton
-- [ ] No unused Angular Material modules imported in shared modules
+- [ ] No unused spartan/ui modules imported in shared modules
 
 ## Docker/nginx Performance
 
